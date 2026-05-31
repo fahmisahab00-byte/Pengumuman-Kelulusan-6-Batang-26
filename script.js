@@ -292,7 +292,7 @@ async function loginSiswa() {
   const appStatus = await getAppClosedStatus();
   if (appStatus.closed) {
     const msg = appStatus.manualClosed
-      ? '<i class="fas fa-lock"></i> Pengumuman kelulusan peserta didik akan terbuka secara otomatis tepat pada pukul 18.00 WIB.'
+      ? '<i class="fas fa-lock"></i> <strong>Pengumuman kelulusan peserta didik akan terbuka secara otomatis tepat pada pukul 18.00 WIB.</strong>'
       : `<i class="fas fa-clock"></i> Masa pengumuman kelulusan telah <strong>berakhir</strong> pada ${formatAutoCloseTime()}. Terima kasih atas partisipasi Anda.`;
     showAlert('alert-siswa', msg, 'error');
     return;
